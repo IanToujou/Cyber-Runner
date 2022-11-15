@@ -10,7 +10,7 @@ public class PlayerCamera : MonoBehaviour
     }
 
     public void Update() {
-        gameObject.transform.position = new Vector3(player.transform.position.x - 1, 0, -10);
+        gameObject.transform.position = new Vector3(player.transform.position.x + 5, 0, -10);
     }
 
 }

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour {
 
+    [SerializeField] private GameObject bulletPrefab;
+
     private int currentLane;
     private int minLane;
     private int maxLane;
@@ -16,14 +18,13 @@ public class PlayerControls : MonoBehaviour {
 
     void Update() {
 
-        Input.GetKeyDown(KeyCode.W);
         if(Input.GetKeyDown(KeyCode.W) && currentLane < maxLane) {
             currentLane += 1;
         } else if(Input.GetKeyDown(KeyCode.S) && currentLane > minLane) {
             currentLane -= 1;
         }
 
-        float y = -1.604542f + currentLane;
+        float y = -2.2f + currentLane;
         Vector3 newPosition = new Vector3(transform.position.x, y, transform.position.z);
 
         if (lerpValue < 0.2) {
@@ -31,6 +32,10 @@ public class PlayerControls : MonoBehaviour {
              transform.position = Vector3.Lerp(transform.position, newPosition, lerpValue);
         } else {
              lerpValue = 0;
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
 
     }
