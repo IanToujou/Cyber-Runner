@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour {
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
         player = GameManager.GetPlayer();
-        if(ownedByPlayer) gameObject.transform.position = new Vector3(player.transform.position.x+5.75f, player.transform.position.y+2.1f, -0.1f);
+        if(ownedByPlayer) gameObject.transform.position = new Vector3(player.transform.position.x+1f, player.transform.position.y, -0.1f);
         StartCoroutine(StartDespawnDelay());
     }
 

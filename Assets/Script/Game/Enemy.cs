@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.CompareTag("Player")) {
+        if(collider.CompareTag("PlayerBullet")) {
             Hurt();
         }
     }
