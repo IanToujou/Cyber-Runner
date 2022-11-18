@@ -35,7 +35,8 @@ public class PlayerControls : MonoBehaviour {
         }
 
         if(Input.GetKeyDown(KeyCode.Space)) {
-            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bullet.GetComponent<Bullet>().SetOwnedByPlayer(true);
         }
 
     }
