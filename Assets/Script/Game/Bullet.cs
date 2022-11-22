@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour {
     void FixedUpdate() {
         if(ownedByPlayer) {
             rigidBody.velocity = new Vector2(10 * speed, rigidBody.velocity.y);
+        } else {
+            rigidBody.velocity = new Vector2(-10 * speed, rigidBody.velocity.y);
         }
     }
 

@@ -13,7 +13,7 @@ public class CameraShake : MonoBehaviour {
     void FixedUpdate() {
         if(!shaking) {
             shaking = true;
-            StartCoroutine(Shake(10f, 0.2f));
+            StartCoroutine(Shake(10f, 0.1f));
         }
     }
     

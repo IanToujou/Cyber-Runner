@@ -13,8 +13,8 @@ public class LaneTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D collider) {
         if(collider.CompareTag("Player")) {
-            playerControls.setMaxLane(maxLane);
-            playerControls.setMinLane(minLane);
+            playerControls.SetMaxLane(maxLane);
+            playerControls.SetMinLane(minLane);
         }
     }
 
