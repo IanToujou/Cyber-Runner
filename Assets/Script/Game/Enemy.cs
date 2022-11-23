@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     
-    [SerializeField] private float health;
+    [SerializeField] private int maxHealth;
+    [SerializeField] private int maxShield;
     
     private Animator animator;
     private GameObject player;
+    private int health;
+    private int shield;
     private bool coolingDownHit;
 
     void Start() {
@@ -25,8 +28,11 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Hurt(GameObject bullet) {
-        Debug.Log("Hit");
-        health--;
+        if(shield > 0) {
+            shield--;
+        } else {
+            health--;
+        }
         animator.SetTrigger("ReceiveDamage");
         Destroy(bullet);
     }
