@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43a33b92bcd9b514f9dd85b3f14abd14
+guid: 7baf286e664098f449a1f4ea6018eede
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50eb76176c231e0439dca49389b7832c
-      internalID: -1506802640
+      spriteID: 3ade2bdb880612b4eb3cfb033946c29c
+      internalID: -1156730358
       vertices: []
       indices: 
       edges: []
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ddb1e30176a97843a250ed88d0ae7d2
-      internalID: 28893908
+      spriteID: e192dedac91525b4d9ca68f427fb0a76
+      internalID: -1521756047
       vertices: []
       indices: 
       edges: []
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bd9a73b5142a9e4cab0d0e2f5e68682
-      internalID: -420496697
+      spriteID: e66b385574a6c2449a84eb9a85387569
+      internalID: -1834666372
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44eb05b9b2d4d1547ac5e57a6709563e
-      internalID: -1701550318
+      spriteID: b18ef3ed8a0204d4ab5080771355a6cc
+      internalID: -1998418228
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      drone_capsule_walk2_0: -1506802640
-      drone_capsule_walk2_3: -1701550318
-      drone_capsule_walk2_1: 28893908
-      drone_capsule_walk2_2: -420496697
+      drone_capsule_walk2_0: -1156730358
+      drone_capsule_walk2_3: -1998418228
+      drone_capsule_walk2_1: -1521756047
+      drone_capsule_walk2_2: -1834666372
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

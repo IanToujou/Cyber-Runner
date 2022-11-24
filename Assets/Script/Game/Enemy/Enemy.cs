@@ -11,14 +11,29 @@ public class Enemy : MonoBehaviour {
     private int health;
     private int shield;
     private bool coolingDownHit;
+    private bool dead;
 
     void Start() {
         animator = GetComponentInChildren<Animator>();
         player = GameManager.GetPlayer();
+        health = maxHealth;
+        shield = maxShield;
         coolingDownHit = false;
+        dead = false;
+    }
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.H)) {
+            Attack();
+        }
+        if(health <= 0) {
+            Death();
+            return;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
+        if(dead) return;
         if(collider.CompareTag("PlayerBullet")) {
             if(coolingDownHit) return;
             coolingDownHit = true;
@@ -28,13 +43,24 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Hurt(GameObject bullet) {
+        if(dead) return;
         if(shield > 0) {
-            shield--;
+            shield -= bullet.GetComponent<Bullet>().GetDamage();
         } else {
-            health--;
+            health -= bullet.GetComponent<Bullet>().GetDamage();
         }
-        animator.SetTrigger("ReceiveDamage");
+        animator.SetTrigger("Hurt");
         Destroy(bullet);
+    }
+
+    public void Attack() {
+        if(dead) return;
+        animator.SetTrigger("Attack");
+    }
+
+    public void Death() {
+        dead = true;
+        animator.SetTrigger("Death");
     }
 
     public IEnumerator StartHitCooldown() {
