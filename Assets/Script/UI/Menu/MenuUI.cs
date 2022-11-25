@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuUI : MonoBehaviour {
     
@@ -15,6 +16,12 @@ public class MenuUI : MonoBehaviour {
     [SerializeField] private GameObject mainUI;
     
     private static List<GameObject> uiList;
+
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.H)) {
+            SceneManager.LoadScene(1);
+        }
+    }
     
     void OnEnable() {
         uiList = new List<GameObject>();
