@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     
+    [SerializeField] private bool obstacle;
     [SerializeField] private int maxHealth;
     [SerializeField] private int maxShield;
     
     private Animator animator;
     private GameObject player;
+    private GameObject cameraHolder;
     private int health;
     private int shield;
     private bool coolingDownHit;
@@ -16,16 +18,15 @@ public class Enemy : MonoBehaviour {
     void Start() {
         animator = GetComponentInChildren<Animator>();
         player = GameManager.GetPlayer();
+        cameraHolder = GameManager.getCameraHolder();
         health = maxHealth;
         shield = maxShield;
         coolingDownHit = false;
         dead = false;
+        if(!obstacle) transform.parent = cameraHolder.transform;
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.H)) {
-            Attack();
-        }
         if(health <= 0) {
             Death();
             return;
@@ -61,6 +62,7 @@ public class Enemy : MonoBehaviour {
     public void Death() {
         dead = true;
         animator.SetTrigger("Death");
+        Destroy(gameObject);
     }
 
     public IEnumerator StartHitCooldown() {

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0299cef24402c5347951a8ae4e387a43
+guid: 33cd2b5dedcda964490fdaa9d8b6c424
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: police_tank_boom_0
+      name: effect_boom_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e47a032d26c9e34fa3e40eb3758f319
-      internalID: -1587201864
+      spriteID: 3c19fe0c8ccd1164b9da3889c1269076
+      internalID: -421361276
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_1
+      name: effect_boom_1
       rect:
         serializedVersion: 2
         x: 48
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54998dca86045b84d83ecf086fb70936
-      internalID: 771030670
+      spriteID: 22a931d72208ca14d8ba78c74cb34265
+      internalID: 1292437493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_2
+      name: effect_boom_2
       rect:
         serializedVersion: 2
         x: 96
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43904832040b6254686d1e8c8242c3e6
-      internalID: 130083778
+      spriteID: 6df10a2cc72e5e74d80d793553e9250e
+      internalID: 1812568318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_3
+      name: effect_boom_3
       rect:
         serializedVersion: 2
         x: 144
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdde8589586923144b902fb84be5663c
-      internalID: -29805286
+      spriteID: 045a889d1ed878e44b04e2f97230d7c1
+      internalID: -425771038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_4
+      name: effect_boom_4
       rect:
         serializedVersion: 2
         x: 192
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ce22a9fc146bbe49ab6b8db16c15b25
-      internalID: -973768888
+      spriteID: eac601b950c1cfd4bb5a3fc54aadb2d1
+      internalID: -91756360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_5
+      name: effect_boom_5
       rect:
         serializedVersion: 2
         x: 240
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5760b17b6d15d914b95364c22cb353b3
-      internalID: 1389650466
+      spriteID: e1697d28187697e4fa525f17531905ca
+      internalID: 153259729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_6
+      name: effect_boom_6
       rect:
         serializedVersion: 2
         x: 288
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b22ed2eab5b7ac4fa164a8b97c48944
-      internalID: -511003629
+      spriteID: 5cc112851c66d634d9306c1a63ae4d87
+      internalID: 172681615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: police_tank_boom_7
+      name: effect_boom_7
       rect:
         serializedVersion: 2
         x: 336
@@ -268,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e2a04eba89ca9e49b2c52ce4ec224c3
-      internalID: 1077028753
+      spriteID: 7342d880f49df8644bdf7252d43d5c10
+      internalID: -910080307
       vertices: []
       indices: 
       edges: []
@@ -285,14 +285,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      police_tank_boom_7: 1077028753
-      police_tank_boom_3: -29805286
-      police_tank_boom_5: 1389650466
-      police_tank_boom_0: -1587201864
-      police_tank_boom_6: -511003629
-      police_tank_boom_1: 771030670
-      police_tank_boom_2: 130083778
-      police_tank_boom_4: -973768888
+      effect_boom_1: 1292437493
+      effect_boom_6: 172681615
+      effect_boom_5: 153259729
+      effect_boom_7: -910080307
+      effect_boom_0: -421361276
+      effect_boom_4: -91756360
+      effect_boom_2: 1812568318
+      effect_boom_3: -425771038
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

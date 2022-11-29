@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70b02fc1a4123fb4aa7b425ff6f9c6d9
+guid: 3b9bfd7f32c378f488ee90f6b3b35deb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,54 +103,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -169,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9dddea50dfa455945a6064ae27e62951
-      internalID: -1193062805
+      spriteID: 4c5a3f33ee68952498f95afa118cb294
+      internalID: 2091946126
       vertices: []
       indices: 
       edges: []
@@ -190,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8003aff1ddecc478c3990c522670c7
-      internalID: -1865615585
+      spriteID: fa2e74213bd01f047afe2422a6aafb2e
+      internalID: -2095927263
       vertices: []
       indices: 
       edges: []
@@ -211,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddac7f22c267550488ec5e9cb1f88dee
-      internalID: -780367010
+      spriteID: 0f5e9e49819965b4fb6abfa1684ba7de
+      internalID: 1137562445
       vertices: []
       indices: 
       edges: []
@@ -232,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2c00d431ae1dd44ea6896d8bfd3bb07
-      internalID: 776659395
+      spriteID: d53ea28b48b3d774e84067b6f4519aec
+      internalID: -1385882012
       vertices: []
       indices: 
       edges: []
@@ -253,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4105ba4575cb1b4499540f565d9443e
-      internalID: -537968776
+      spriteID: 0048fe79f7bad3f4f97122fe35265689
+      internalID: -1977154257
       vertices: []
       indices: 
       edges: []
@@ -274,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2271df829a2a4c4439fcda1103591b09
-      internalID: 2127319972
+      spriteID: 379683170032ed249aefadf72877960a
+      internalID: 345001432
       vertices: []
       indices: 
       edges: []
@@ -291,12 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      motorcycle_driving_5: 2127319972
-      motorcycle_driving_3: 776659395
-      motorcycle_driving_1: -1865615585
-      motorcycle_driving_0: -1193062805
-      motorcycle_driving_2: -780367010
-      motorcycle_driving_4: -537968776
+      motorcycle_driving_5: 345001432
+      motorcycle_driving_3: -1385882012
+      motorcycle_driving_1: -2095927263
+      motorcycle_driving_0: 2091946126
+      motorcycle_driving_2: 1137562445
+      motorcycle_driving_4: -1977154257
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
