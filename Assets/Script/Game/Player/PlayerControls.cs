@@ -15,6 +15,7 @@ public class PlayerControls : MonoBehaviour {
     private GameObject currentWeapon;
     private bool coolingDownHit, dead;
     private Animator animator;
+    private AudioSource audioSource;
 
     void Start() {
 
@@ -33,6 +34,7 @@ public class PlayerControls : MonoBehaviour {
 
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -102,16 +104,18 @@ public class PlayerControls : MonoBehaviour {
         RemoveWeapon();
         GameObject animation = Instantiate(deathEffectPrefab, transform.position, transform.rotation);
         animation.transform.parent = transform;
+        audioSource.Play();
         Destroy(animation, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 
     public void Hurt(GameObject bullet) {
         if(dead) return;
-        animator.SetTrigger("Hurt");
         if(shield > 0) {
             shield -= bullet.GetComponent<Bullet>().GetDamage();
+            animator.SetTrigger("ShieldHurt");
         } else {
             health -= bullet.GetComponent<Bullet>().GetDamage();
+            animator.SetTrigger("Hurt");
         }
         Destroy(bullet);
     }

@@ -11,4 +11,5 @@ public class TextWeapon : MonoBehaviour {
         Weapon weapon = playerScript.GetWeapon();
         gameObject.GetComponent<TextMeshProUGUI>().text = weapon.GetWeaponName();
     }
+    
 }
