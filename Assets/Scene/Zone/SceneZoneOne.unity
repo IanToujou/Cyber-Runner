@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   songs:
-  - {fileID: 8300000, guid: 4a15dec45577a6c47b01d8ea8492643e, type: 3}
+  - {fileID: 8300000, guid: c0c370ba51146cd4da3494b6446ae167, type: 3}
   songText: {fileID: 0}
 --- !u!4 &641674705
 Transform:
@@ -1796,7 +1796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125940382723153529, guid: fd9b4aa80b4bcc042b4980d37a6d0a87, type: 3}
       propertyPath: obstacle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 125940382723153531, guid: fd9b4aa80b4bcc042b4980d37a6d0a87, type: 3}
       propertyPath: m_RootOrder
@@ -1804,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125940382723153531, guid: fd9b4aa80b4bcc042b4980d37a6d0a87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.78
+      value: 8.28
       objectReference: {fileID: 0}
     - target: {fileID: 125940382723153531, guid: fd9b4aa80b4bcc042b4980d37a6d0a87, type: 3}
       propertyPath: m_LocalPosition.y

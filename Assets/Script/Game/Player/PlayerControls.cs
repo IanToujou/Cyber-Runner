@@ -40,6 +40,10 @@ public class PlayerControls : MonoBehaviour {
 
     void Update() {
         
+        if(Input.GetKeyDown(KeyCode.H)) {
+            Hurt(5);
+        }
+
         //Shield and health fix for future usage.
         if(health < 0) health = 0;
         if(shield < 0) shield = 0;
@@ -118,6 +122,17 @@ public class PlayerControls : MonoBehaviour {
             animator.SetTrigger("Hurt");
         }
         Destroy(bullet);
+    }
+
+    public void Hurt(int damage) {
+        if(dead) return;
+        if(shield > 0) {
+            shield -= damage;
+            animator.SetTrigger("ShieldHurt");
+        } else {
+            health -= damage;
+            animator.SetTrigger("Hurt");
+        }
     }
 
     public int GetHealth() {
