@@ -36,6 +36,7 @@ public class Weapon : MonoBehaviour {
         Destroy(animation, animation.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).length); 
         animation.transform.parent = gameObject.transform;
         ammo--;
+        GetComponent<AudioSource>().Play();
     }
 
     public void Reload() {

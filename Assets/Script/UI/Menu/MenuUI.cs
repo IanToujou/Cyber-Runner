@@ -16,6 +16,7 @@ public class MenuUI : MonoBehaviour {
     [SerializeField] private GameObject mainUI;
     
     private static List<GameObject> uiList;
+    private static int activeCanvas;
     
     void OnEnable() {
         uiList = new List<GameObject>();
@@ -27,6 +28,7 @@ public class MenuUI : MonoBehaviour {
     public static void SetActiveCanvas(int layout) {
         DeactivateAllCanvas();
         uiList[layout].SetActive(true);
+        activeCanvas = layout;
     }
 
     public static void DeactivateAllCanvas() {

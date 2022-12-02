@@ -110,6 +110,7 @@ public class PlayerControls : MonoBehaviour {
         animation.transform.parent = transform;
         audioSource.Play();
         Destroy(animation, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        StartCoroutine(StartDeathScreenCooldown());
     }
 
     public void Hurt(GameObject bullet) {
@@ -187,6 +188,11 @@ public class PlayerControls : MonoBehaviour {
     public IEnumerator StartHitCooldown() {
         yield return new WaitForSeconds(0.1f);
         coolingDownHit = false;
+    }
+
+    public IEnumerator StartDeathScreenCooldown() {
+        yield return new WaitForSeconds(1.3f);
+        IngameUI.SetActiveCanvas(IngameUI.DEATH);
     }
 
 }

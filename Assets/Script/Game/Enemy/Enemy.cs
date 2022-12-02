@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private bool obstacle;
     [SerializeField] private int maxHealth;
     [SerializeField] private int maxShield;
+    [SerializeField] private GameObject deathEffectPrefab;
     
     private Animator animator;
     private GameObject player;
@@ -40,6 +41,8 @@ public class Enemy : MonoBehaviour {
             coolingDownHit = true;
             StartCoroutine(StartHitCooldown());
             Hurt(collider.gameObject);
+        } else if(collider.CompareTag("Player")) {
+            Death();
         }
     }
 
@@ -62,7 +65,11 @@ public class Enemy : MonoBehaviour {
     public void Death() {
         dead = true;
         animator.SetTrigger("Death");
-        Destroy(gameObject);
+        GameObject animation = Instantiate(deathEffectPrefab, transform.position, transform.rotation);
+        animation.transform.parent = transform;
+        GetComponent<AudioSource>().Play();
+        Destroy(animation, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        Destroy(gameObject, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 
     public IEnumerator StartHitCooldown() {
