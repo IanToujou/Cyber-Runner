@@ -7,13 +7,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private int maxHealth;
     [SerializeField] private int maxShield;
     [SerializeField] private AudioSource deathAudioSource;
-    [SerializeField] private AudioSource shootAudioSource;
     [SerializeField] private GameObject deathEffectPrefab;
-    [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private GameObject bulletHolder;
-    [SerializeField] private bool hasShootAnimation;
-    [SerializeField] private GameObject shootAnimation;
-    [SerializeField] private GameObject shootAnimationHolder;
     [SerializeField] private string attackScript;
     
     private Animator animator;
@@ -78,6 +72,12 @@ public class Enemy : MonoBehaviour {
             script.Attack();
         } else if(attackScript.Equals("PoliceTank")) {
             PoliceTank script = GetComponent<PoliceTank>();
+            script.Attack();
+        } else if(attackScript.Equals("PoliceJeep")) {
+            PoliceJeep script = GetComponent<PoliceJeep>();
+            script.Attack();
+        } else if(attackScript.Equals("PoliceHover")) {
+            PoliceHover script = GetComponent<PoliceHover>();
             script.Attack();
         }
 

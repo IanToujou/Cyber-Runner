@@ -78,15 +78,9 @@ MonoBehaviour:
   obstacle: 0
   maxHealth: 10
   maxShield: 10
-  shotCooldown: 1
   deathAudioSource: {fileID: 8107992909025992046}
-  shootAudioSource: {fileID: -8933252909299432017}
   deathEffectPrefab: {fileID: 6129170574165103521, guid: f60de33a1d9fe174ea2e2dc8838e438d, type: 3}
-  bulletPrefab: {fileID: 7379327748595559360, guid: c282cbc6fd377c04c864f7283d436b74, type: 3}
-  bulletHolder: {fileID: 3985497993039229391}
-  hasShootAnimation: 0
-  shootAnimation: {fileID: 0}
-  shootAnimationHolder: {fileID: 0}
+  attackScript: PoliceCar
 --- !u!82 &8107992909025992046
 AudioSource:
   m_ObjectHideFlags: 0

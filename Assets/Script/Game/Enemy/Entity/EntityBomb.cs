@@ -35,6 +35,7 @@ public class EntityBomb : MonoBehaviour {
             GameObject animation = Instantiate(deathEffectPrefab, transform.position, transform.rotation);
             animation.transform.parent = transform;
             audioSource.Play();
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
             Destroy(animation, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
             Destroy(gameObject, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         }

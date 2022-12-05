@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 6820055816902719389}
   - component: {fileID: 1845294698725246896}
   - component: {fileID: -2325984002255081708}
+  - component: {fileID: 2242867999417434385}
   m_Layer: 0
   m_Name: EnemyPoliceJeep
   m_TagString: Enemy
@@ -58,7 +59,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6820055816902719376}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: -0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -67,7 +68,7 @@ Transform:
   - {fileID: 5903546877616113138}
   - {fileID: 6180208381655348452}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6820055816902719390
 BoxCollider2D:
@@ -110,15 +111,9 @@ MonoBehaviour:
   obstacle: 0
   maxHealth: 10
   maxShield: 10
-  shotCooldown: 2
   deathAudioSource: {fileID: 1845294698725246896}
-  shootAudioSource: {fileID: -2325984002255081708}
   deathEffectPrefab: {fileID: 6129170574165103521, guid: f60de33a1d9fe174ea2e2dc8838e438d, type: 3}
-  bulletPrefab: {fileID: 617080290798298592, guid: 6a7aa1c1bb445514bbfacaa27131491e, type: 3}
-  bulletHolder: {fileID: 8209646342951944069}
-  hasShootAnimation: 0
-  shootAnimation: {fileID: 0}
-  shootAnimationHolder: {fileID: 0}
+  attackScript: PoliceJeep
 --- !u!82 &1845294698725246896
 AudioSource:
   m_ObjectHideFlags: 0
@@ -225,7 +220,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 21ba3a6e27d3ad044b08b910d3e0bfce, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e9387ded0e29c2246891b77d4ec025b0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -311,6 +306,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2242867999417434385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6820055816902719376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dee66e2124b784e90f3791993e382f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackCooldown: 2
+  bulletPrefab: {fileID: 617080290798298592, guid: 6a7aa1c1bb445514bbfacaa27131491e, type: 3}
+  bulletHolder: {fileID: 5903546877616113138}
+  shootAudioSource: {fileID: -2325984002255081708}
 --- !u!1 &6820055816993790046
 GameObject:
   m_ObjectHideFlags: 0
