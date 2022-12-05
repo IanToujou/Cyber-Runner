@@ -6,10 +6,9 @@ public class PlayerControls : MonoBehaviour {
     [SerializeField] private GameObject weapon;
     [SerializeField] private GameObject deathEffectPrefab;
     [SerializeField] private float speed;
-    [SerializeField] private int maxHealth;
-    [SerializeField] private int maxShield;
+    [SerializeField] private int maxHealth, maxShield, minLane, maxLane;
 
-    private int health, shield, currentLane, minLane, maxLane;
+    private int health, shield, currentLane;
     private float lerpValue;
     private Rigidbody2D rigidBody;
     private GameObject currentWeapon;
@@ -22,8 +21,6 @@ public class PlayerControls : MonoBehaviour {
         health = maxHealth;
         shield = maxShield;
         currentLane = 0;
-        minLane = -1;
-        maxLane = 2;
         lerpValue = 0;
         coolingDownHit = false;
         dead = false;
@@ -99,6 +96,12 @@ public class PlayerControls : MonoBehaviour {
             coolingDownHit = true;
             StartCoroutine(StartHitCooldown());
             Death();
+        } else if(collider.CompareTag("Bomb")) {
+            if(currentLane != collider.gameObject.GetComponent<EntityBomb>().GetLaneToBomb()) return;
+            if(coolingDownHit) return;
+            coolingDownHit = true;
+            StartCoroutine(StartHitCooldown());
+            Hurt(10);
         }
     }
 
@@ -156,12 +159,24 @@ public class PlayerControls : MonoBehaviour {
         this.minLane = lane;
     }
 
+    public int GetMinLane() {
+        return minLane;
+    }
+
     public void SetMaxLane(int lane) {
         this.maxLane = lane;
     }
 
+    public int GetMaxLane() {
+        return maxLane;
+    }
+
     public void SetCurrentLane(int lane) {
         this.currentLane = lane;
+    }
+    
+    public int GetCurrentLane() {
+        return currentLane;
     }
 
     public bool HasWeapon() {

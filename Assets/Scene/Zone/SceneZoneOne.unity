@@ -192,11 +192,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20f87cc6dc0889439c826ba26a8669c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3321815032915039037, guid: 57e283ae7cb35424986bce897b0d07be, type: 3}
+  weapon: {fileID: 5913860258114525352, guid: 9a0296fbf21a6da41875d4d5da777351, type: 3}
   deathEffectPrefab: {fileID: 6129170574165103521, guid: f60de33a1d9fe174ea2e2dc8838e438d, type: 3}
   speed: 2
-  maxHealth: 100
-  maxShield: 100
+  maxHealth: 20
+  maxShield: 10
+  minLane: -1
+  maxLane: 2
 --- !u!61 &18366757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -851,7 +853,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2091946126, guid: 3b9bfd7f32c378f488ee90f6b3b35deb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1045,7 +1047,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1933,6 +1935,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1231537094}
   m_CullTransparentMesh: 1
+--- !u!1001 &1306669152
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4563070118079808705, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_Name
+      value: EnemyPoliceHeli
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4563070118079808718, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a9284c054601f943b1473eaef9fba8a, type: 3}
 --- !u!1 &1350536781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2080,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2729,7 +2790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4c8bb44f113fd4d9bdeb6e50fa46cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLane: 1
+  maxLane: 2
   minLane: -1
 --- !u!61 &1894062675
 BoxCollider2D:

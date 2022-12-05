@@ -6,7 +6,15 @@ public class Enemy : MonoBehaviour {
     [SerializeField] private bool obstacle;
     [SerializeField] private int maxHealth;
     [SerializeField] private int maxShield;
+    [SerializeField] private AudioSource deathAudioSource;
+    [SerializeField] private AudioSource shootAudioSource;
     [SerializeField] private GameObject deathEffectPrefab;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject bulletHolder;
+    [SerializeField] private bool hasShootAnimation;
+    [SerializeField] private GameObject shootAnimation;
+    [SerializeField] private GameObject shootAnimationHolder;
+    [SerializeField] private string attackScript;
     
     private Animator animator;
     private GameObject player;
@@ -32,6 +40,9 @@ public class Enemy : MonoBehaviour {
             Death();
             return;
         }
+
+        if(!obstacle) Attack();
+
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -58,18 +69,38 @@ public class Enemy : MonoBehaviour {
     }
 
     public void Attack() {
+
         if(dead) return;
-        animator.SetTrigger("Attack");
+
+        //Attack script
+        if(attackScript.Equals("PoliceHelicopter")) {
+            PoliceHelicopter script = GetComponent<PoliceHelicopter>();
+            script.Attack();
+        } else if(attackScript.Equals("PoliceTank")) {
+            PoliceTank script = GetComponent<PoliceTank>();
+            script.Attack();
+        }
+
+        /*
+        if(hasShootAnimation) {
+            GameObject animation = Instantiate(shootAnimation, shootAnimationHolder.transform.position, shootAnimationHolder.transform.rotation);
+            animation.transform.localScale = new Vector3(-1, 1, 1);
+            Destroy(animation, animation.GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).length); 
+            animation.transform.parent = gameObject.transform;
+        }
+        */
+
     }
 
     public void Death() {
+        if(dead) return;
         dead = true;
         animator.SetTrigger("Death");
         GameObject animation = Instantiate(deathEffectPrefab, transform.position, transform.rotation);
         animation.transform.parent = transform;
-        GetComponent<AudioSource>().Play();
+        deathAudioSource.Play();
         Destroy(animation, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-        Destroy(gameObject, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        Destroy(gameObject, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length+1f);
     }
 
     public IEnumerator StartHitCooldown() {
