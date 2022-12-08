@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour {
         return staticPlayer;
     }
 
-    public static GameObject getCameraHolder() {
+    public static GameObject GetCameraHolder() {
         return staticCameraHolder;
     }
 

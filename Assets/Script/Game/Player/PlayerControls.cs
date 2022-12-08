@@ -8,7 +8,7 @@ public class PlayerControls : MonoBehaviour {
     [SerializeField] private float speed;
     [SerializeField] private int maxHealth, maxShield, minLane, maxLane;
 
-    private int health, shield, currentLane;
+    private int health, shield, currentLane, currentFightZone;
     private float lerpValue;
     private Rigidbody2D rigidBody;
     private GameObject currentWeapon;
@@ -21,6 +21,7 @@ public class PlayerControls : MonoBehaviour {
         health = maxHealth;
         shield = maxShield;
         currentLane = 0;
+        currentFightZone = 0;
         lerpValue = 0;
         coolingDownHit = false;
         dead = false;
@@ -177,6 +178,14 @@ public class PlayerControls : MonoBehaviour {
     
     public int GetCurrentLane() {
         return currentLane;
+    }
+
+    public void SetCurrentFightZone(int fightZone) {
+        this.currentFightZone = fightZone;
+    }
+    
+    public int GetCurrentFightZone() {
+        return currentFightZone;
     }
 
     public bool HasWeapon() {

@@ -40,13 +40,13 @@ public class PoliceHelicopter : MonoBehaviour {
         int laneToBomb = player.GetCurrentLane();
         float y = -2.4f + laneToBomb;
         GameObject marker = Instantiate(markerPrefab, new Vector3(transform.position.x, y, 0f), Quaternion.identity);
-        marker.transform.parent = GameManager.getCameraHolder().transform;
+        marker.transform.parent = GameManager.GetCameraHolder().transform;
 
         animator.SetTrigger("Attack");
         yield return new WaitForSeconds(0.5f);
 
         GameObject bomb = Instantiate(bombPrefab, dropLocation.position, Quaternion.identity);
-        bomb.transform.parent = GameManager.getCameraHolder().transform;
+        bomb.transform.parent = GameManager.GetCameraHolder().transform;
         bomb.GetComponent<EntityBomb>().SetLaneToBomb(laneToBomb);
         bomb.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -1f);
         dropAudioSource.Play();

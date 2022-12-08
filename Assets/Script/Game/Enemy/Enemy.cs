@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour {
     void Start() {
         animator = GetComponentInChildren<Animator>();
         player = GameManager.GetPlayer();
-        cameraHolder = GameManager.getCameraHolder();
+        cameraHolder = GameManager.GetCameraHolder();
         health = maxHealth;
         shield = maxShield;
         coolingDownHit = false;
