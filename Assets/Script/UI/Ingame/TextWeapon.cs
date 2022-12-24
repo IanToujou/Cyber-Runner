@@ -9,7 +9,7 @@ public class TextWeapon : MonoBehaviour {
         PlayerControls playerScript = player.GetComponent<PlayerControls>();
         if(!playerScript.HasWeapon()) return;
         Weapon weapon = playerScript.GetWeapon();
-        gameObject.GetComponent<TextMeshProUGUI>().text = weapon.GetWeaponName();
+        gameObject.GetComponent<TextMeshProUGUI>().text = weapon.GetWeaponName().ToUpper();
     }
     
 }

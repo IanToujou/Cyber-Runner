@@ -39,7 +39,7 @@ public class FightTriggerStart : MonoBehaviour {
             player.GetComponent<PlayerControls>().SetCurrentFightZone(fightZone);
 
             for (int i = 0; i < enemyPrefabs.Length; i++) {
-                Vector3 location = new Vector3(GameManager.GetCameraHolder().transform.position.x+5f, GameManager.GetCameraHolder().transform.position.y+spawnLocationY[i], 0);
+                Vector3 location = new Vector3(GameManager.GetCameraHolder().transform.position.x+5f, GameManager.GetCameraHolder().transform.position.y+spawnLocationY[i]+0.7f, 0);
                 GameObject enemy = Instantiate(enemyPrefabs[i], location, Quaternion.identity);
                 enemyList.Add(enemy);
             }

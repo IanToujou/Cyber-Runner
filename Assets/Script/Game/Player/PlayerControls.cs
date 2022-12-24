@@ -50,6 +50,8 @@ public class PlayerControls : MonoBehaviour {
         if(dead) return;
         if(health <= 0) Death();
 
+        if(currentLane > maxLane || currentLane < minLane) Death();
+
         if(Input.GetKeyDown(KeyCode.W) && currentLane < maxLane) {
             currentLane += 1;
         } else if(Input.GetKeyDown(KeyCode.S) && currentLane > minLane) {
