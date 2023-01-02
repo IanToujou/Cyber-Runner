@@ -21,6 +21,13 @@ public class Weapon : MonoBehaviour {
         coolingDownReload = false;
     }
 
+    void FixedUpdate() {
+        Vector3 position = GameManager.GetCameraHolder().GetComponentInChildren<Camera>().ScreenToWorldPoint(Input.mousePosition);
+        Vector3 rotation = transform.position - position;
+        float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot + 180f);
+    }
+
     public void Shoot() {
         if(ammo <= 0) {
             Reload();

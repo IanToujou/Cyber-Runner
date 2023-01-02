@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class Splash : MonoBehaviour {
+public class VideoSplash : MonoBehaviour {
 
     private static bool hasStarted = false;
     private VideoPlayer player;

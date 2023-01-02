@@ -58,7 +58,7 @@ public class PlayerControls : MonoBehaviour {
             currentLane -= 1;
         }
 
-        float y = -2.2f + currentLane;
+        float y = -2.15f + currentLane;
         Vector3 newPosition = new Vector3(transform.position.x, y, transform.position.z);
 
         if (lerpValue < 0.2) {
@@ -99,6 +99,11 @@ public class PlayerControls : MonoBehaviour {
             coolingDownHit = true;
             StartCoroutine(StartHitCooldown());
             Death();
+        }  else if(collider.CompareTag("Hole")) {
+            if(coolingDownHit) return;
+            coolingDownHit = true;
+            StartCoroutine(StartHitCooldown());
+            Death();
         } else if(collider.CompareTag("Bomb")) {
             if(currentLane != collider.gameObject.GetComponent<EntityBomb>().GetLaneToBomb()) return;
             if(coolingDownHit) return;
@@ -117,6 +122,11 @@ public class PlayerControls : MonoBehaviour {
         audioSource.Play();
         Destroy(animation, animation.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         StartCoroutine(StartDeathScreenCooldown());
+        GameManager.GetMusicManager().PlaySong(0);
+    }
+
+    public bool IsDead() {
+        return dead;
     }
 
     public void Hurt(GameObject bullet) {
@@ -140,6 +150,14 @@ public class PlayerControls : MonoBehaviour {
             health -= damage;
             animator.SetTrigger("Hurt");
         }
+    }
+
+    public float GetSpeed() {
+        return speed;
+    }
+
+    public void SetSpeed(float speed) {
+        this.speed = speed;
     }
 
     public int GetHealth() {
@@ -217,7 +235,7 @@ public class PlayerControls : MonoBehaviour {
     }
 
     public IEnumerator StartDeathScreenCooldown() {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(0.2f);
         IngameUI.SetActiveCanvas(IngameUI.DEATH);
     }
 

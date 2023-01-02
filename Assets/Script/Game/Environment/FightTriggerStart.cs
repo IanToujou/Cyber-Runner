@@ -21,11 +21,17 @@ public class FightTriggerStart : MonoBehaviour {
         if(hasEntered) {
             int count = 0;
             foreach(GameObject enemy in enemyList) {
-                if(enemy != null) count++;
+                if(enemy != null) {
+                    count++;
+                    if(GameManager.GetPlayer().GetComponent<PlayerControls>().IsDead()) {
+                        Destroy(enemy);
+                    }
+                }
             }
             enemiesAlive = count;
             if(count <= 0) secondTrigger.GetComponent<FightTriggerEnd>().SetCanLeave(true);
         }
+
     }
     
     void OnTriggerEnter2D(Collider2D collider) {
@@ -39,7 +45,8 @@ public class FightTriggerStart : MonoBehaviour {
             player.GetComponent<PlayerControls>().SetCurrentFightZone(fightZone);
 
             for (int i = 0; i < enemyPrefabs.Length; i++) {
-                Vector3 location = new Vector3(GameManager.GetCameraHolder().transform.position.x+5f, GameManager.GetCameraHolder().transform.position.y+spawnLocationY[i]+0.7f, 0);
+                float y = -2.15f + spawnLocationY[i];
+                Vector3 location = new Vector3(GameManager.GetCameraHolder().transform.position.x+5f, y+0.7f, 0);
                 GameObject enemy = Instantiate(enemyPrefabs[i], location, Quaternion.identity);
                 enemyList.Add(enemy);
             }

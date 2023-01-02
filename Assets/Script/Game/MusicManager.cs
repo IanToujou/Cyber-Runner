@@ -3,7 +3,6 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour {
     
     [SerializeField] private AudioClip[] songs;
-    [SerializeField] private GameObject songText;
 
     private AudioSource source;
     private AudioClip currentSong;
@@ -12,7 +11,7 @@ public class MusicManager : MonoBehaviour {
 
     void Start() {
         currentSong = null;
-        PlaySong(0);
+        PlaySong(1);
     }
 
     public void PlaySong(int song) {

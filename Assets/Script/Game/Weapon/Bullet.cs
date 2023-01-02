@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour {
 
     private GameObject player;
     private Rigidbody2D rigidBody;
+    private Vector3 mousePosition;
 
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -16,6 +17,16 @@ public class Bullet : MonoBehaviour {
         if(ownedByPlayer) {
             gameObject.transform.position = new Vector3(player.transform.position.x+1f, player.transform.position.y, -0.1f);
             gameObject.tag = "PlayerBullet";
+            mousePosition = Input.mousePosition;
+
+            Vector3 position = GameManager.GetCameraHolder().GetComponentInChildren<Camera>().ScreenToWorldPoint(mousePosition);
+            Vector3 direction = position - transform.position;
+            Vector3 rotation = transform.position - position;
+            rigidBody.velocity = new Vector2(direction.x, direction.y).normalized * speed * 10;
+            float rot = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, rot);
+            transform.parent = GameManager.GetCameraHolder().transform;
+
         } else {
             gameObject.tag = "EnemyBullet";
         }
@@ -24,7 +35,7 @@ public class Bullet : MonoBehaviour {
 
     void FixedUpdate() {
         if(ownedByPlayer) {
-            rigidBody.velocity = new Vector2(10 * speed, rigidBody.velocity.y);
+            
         } else {
             rigidBody.velocity = new Vector2(-10 * speed, rigidBody.velocity.y);
         }

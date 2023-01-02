@@ -6,23 +6,36 @@ public class MenuUI : MonoBehaviour {
     
     public const int SPLASH = 0;
     public const int MAIN = 1;
-    public const int PLAY = 2;
-    public const int HARDCORE = 3;
-    public const int PROGRESS = 4;
-    public const int SETTINGS = 5;
-    public const int EXIT = 6;
+    public const int SETTINGS = 2;
+    public const int PROFILE = 3;
 
     [SerializeField] private GameObject splashUI;
     [SerializeField] private GameObject mainUI;
+    [SerializeField] private GameObject settingsUI;
+    [SerializeField] private GameObject profileUI;
     
     private static List<GameObject> uiList;
     private static int activeCanvas;
-    
+
     void OnEnable() {
         uiList = new List<GameObject>();
         uiList.Add(splashUI);
         uiList.Add(mainUI);
+        uiList.Add(settingsUI);
+        uiList.Add(profileUI);
         SetActiveCanvas(SPLASH);
+    }
+
+    void Update() {
+        if(activeCanvas == SETTINGS) {
+            if(Input.GetKeyDown(KeyCode.Escape)) {
+                SetActiveCanvas(MAIN);
+            }
+        } else if(activeCanvas == PROFILE) {
+            if(Input.GetKeyDown(KeyCode.Escape)) {
+                SetActiveCanvas(MAIN);
+            }
+        }
     }
 
     public static void SetActiveCanvas(int layout) {
