@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dd220b2488b34584386a000d528674f7
+guid: b097af320019755458655239672b19b2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -25,7 +25,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,11 +103,47 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: highway_tiles_0
+      name: highway_tiles_zone2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18e0dc19c90105d4f83de85a38f75065
-      internalID: -612032599
+      spriteID: 51b1651046cfd0c4492640335c6cd665
+      internalID: 596777572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_1
+      name: highway_tiles_zone2_1
       rect:
         serializedVersion: 2
         x: 64
@@ -142,14 +178,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae6a885fe0854e4f9d4f45a0bf2dbfa
-      internalID: 1558669496
+      spriteID: b2ea0642650922c44b84334f67bf8761
+      internalID: 1889821099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_2
+      name: highway_tiles_zone2_2
       rect:
         serializedVersion: 2
         x: 128
@@ -163,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 975c66a860541e547ba87075fe4b219f
-      internalID: -1213470625
+      spriteID: e3b9990518d7fba40819d6c4c6e2a1c9
+      internalID: -1379399213
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_3
+      name: highway_tiles_zone2_3
       rect:
         serializedVersion: 2
         x: 192
@@ -184,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0912a2873d2660e4e9800729cc3a2f3d
-      internalID: 1065373737
+      spriteID: db0b997652b0e6e43b1b0f76a357e1b5
+      internalID: -1525078263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_4
+      name: highway_tiles_zone2_4
       rect:
         serializedVersion: 2
         x: 256
@@ -205,14 +241,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91bdf9e51d26cb94b83612bbe221d53b
-      internalID: -708996883
+      spriteID: 6cd68109b0d369c4da689290b4c11d00
+      internalID: -1716941513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_5
+      name: highway_tiles_zone2_5
       rect:
         serializedVersion: 2
         x: 0
@@ -226,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1b61e0cf06ae74e927d9bd4002a43f
-      internalID: -472953462
+      spriteID: 25804690ba9e6d94fbd18ad96a6b31e1
+      internalID: -290116180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_6
+      name: highway_tiles_zone2_6
       rect:
         serializedVersion: 2
         x: 64
@@ -247,14 +283,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a5f80119b5e74488056534de905309
-      internalID: 1580682773
+      spriteID: a90fb97e4cf467045b736a33ea99d5f2
+      internalID: -1603442559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_7
+      name: highway_tiles_zone2_7
       rect:
         serializedVersion: 2
         x: 128
@@ -268,14 +304,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2771959f791166e48b4a6ffb8cffdfb5
-      internalID: -1568425531
+      spriteID: fa4be2a8d61d356408dd6731a880605d
+      internalID: 1166701876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_8
+      name: highway_tiles_zone2_8
       rect:
         serializedVersion: 2
         x: 192
@@ -289,14 +325,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 516fc78de7f50cb40ad9981be2eea818
-      internalID: 1295405193
+      spriteID: 01befe2873df81c4084908206d94dca8
+      internalID: 1067840553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_9
+      name: highway_tiles_zone2_9
       rect:
         serializedVersion: 2
         x: 256
@@ -310,14 +346,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca720cd30931ca94ca7a3ce6e5e96d12
-      internalID: -768639474
+      spriteID: 56ad472334906d740a1b10fa547997bd
+      internalID: -428634793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_10
+      name: highway_tiles_zone2_10
       rect:
         serializedVersion: 2
         x: 0
@@ -331,14 +367,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2c9d6904817c534d80e1640e91e7d5f
-      internalID: -1763085792
+      spriteID: c9c7844fbd07c7e4495078ab75477ba8
+      internalID: -1722733436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_11
+      name: highway_tiles_zone2_11
       rect:
         serializedVersion: 2
         x: 64
@@ -352,14 +388,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182ecedd9d5c08f49a87e59138d90abc
-      internalID: -1550330486
+      spriteID: 3233f0972fed6b142997db2ebe941dcb
+      internalID: -516260436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_12
+      name: highway_tiles_zone2_12
       rect:
         serializedVersion: 2
         x: 128
@@ -373,14 +409,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a35d377f76240fc48a8324267e4460c1
-      internalID: -2113925886
+      spriteID: 447b42c7b9d64944cb3c66d80bdf5c0d
+      internalID: -1309038173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_13
+      name: highway_tiles_zone2_13
       rect:
         serializedVersion: 2
         x: 192
@@ -394,14 +430,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc4314424ff67474d9edca34fdbd809f
-      internalID: -158991157
+      spriteID: 34a444c4f6c1b3540a497221e4eba275
+      internalID: -213375770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_14
+      name: highway_tiles_zone2_14
       rect:
         serializedVersion: 2
         x: 256
@@ -415,14 +451,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26a24c5d9f3d06d48aa138bc5da97e4d
-      internalID: -103155306
+      spriteID: 980198cdc902a704591574b650b4906c
+      internalID: -2082386235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_15
+      name: highway_tiles_zone2_15
       rect:
         serializedVersion: 2
         x: 320
@@ -436,14 +472,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc38b28135f93845a748f31b6829880
-      internalID: 854703409
+      spriteID: 9dbeb76aaa55f6442b5b893315167332
+      internalID: -250711604
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_16
+      name: highway_tiles_zone2_16
       rect:
         serializedVersion: 2
         x: 0
@@ -457,14 +493,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9043f2ffa054b214fa4ce676013a6ce8
-      internalID: 3909436
+      spriteID: 0a9ef3754ce3e4e4eb4d937bf9292269
+      internalID: -1451479107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_17
+      name: highway_tiles_zone2_17
       rect:
         serializedVersion: 2
         x: 64
@@ -478,14 +514,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1da72e9d61595134a8933ee8aebea598
-      internalID: 472846507
+      spriteID: 81048f368f03ece459a82e7b19e20fe8
+      internalID: 2036931904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_18
+      name: highway_tiles_zone2_18
       rect:
         serializedVersion: 2
         x: 128
@@ -499,14 +535,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0844daa63c0695a4fa9e47c3ab60a992
-      internalID: -465290990
+      spriteID: 2d7eaa2d981193640ba28faf7a7fa1c4
+      internalID: 1484002220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_19
+      name: highway_tiles_zone2_19
       rect:
         serializedVersion: 2
         x: 192
@@ -520,14 +556,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bab4927a6c58e0e4bbc21272f035e3b3
-      internalID: 1683911705
+      spriteID: c8972ef1ed7c6134bbdf87e2660f38ae
+      internalID: 1095066123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_20
+      name: highway_tiles_zone2_20
       rect:
         serializedVersion: 2
         x: 256
@@ -541,14 +577,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15a6c9fb78bf22f4abd9e9957958898d
-      internalID: -437104289
+      spriteID: ce2b8a7c34f6bba44b0ee079a8c5a731
+      internalID: 946015697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_21
+      name: highway_tiles_zone2_21
       rect:
         serializedVersion: 2
         x: 320
@@ -562,14 +598,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba59aff94fcbc424bb2ae790ccdcefc0
-      internalID: -178162920
+      spriteID: 71b5322b2977d4a4badc3824d7c00f74
+      internalID: -1348550901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_22
+      name: highway_tiles_zone2_22
       rect:
         serializedVersion: 2
         x: 0
@@ -583,14 +619,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb45d7cf0a336e043885cc12d2e8db51
-      internalID: 4920772
+      spriteID: 5ba239009eb5a3a4287248251ad6b006
+      internalID: -181977069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_23
+      name: highway_tiles_zone2_23
       rect:
         serializedVersion: 2
         x: 64
@@ -604,14 +640,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f27b2775ee3974438a06aa2fb2a1db6
-      internalID: -824955304
+      spriteID: 708ee72c4bfa7ed458875ddd58ef61fc
+      internalID: -510614293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_24
+      name: highway_tiles_zone2_24
       rect:
         serializedVersion: 2
         x: 128
@@ -625,14 +661,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bcafeed960b0a584dba773ecd3423df7
-      internalID: 1527730261
+      spriteID: 374ac72c1e4bc99439e6ef706d1313eb
+      internalID: -1997996129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_25
+      name: highway_tiles_zone2_25
       rect:
         serializedVersion: 2
         x: 192
@@ -646,14 +682,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0600a1d86258b354cb605e4b35870f6f
-      internalID: 2106247769
+      spriteID: 9f576ea660d4f464285750199f56c0a3
+      internalID: -1432673416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_26
+      name: highway_tiles_zone2_26
       rect:
         serializedVersion: 2
         x: 256
@@ -667,14 +703,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba2e44b93c4ddc14495fa1d6234d2058
-      internalID: -686670214
+      spriteID: cfa71b78ae3b68b4f99c630839922e13
+      internalID: 1271989934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_27
+      name: highway_tiles_zone2_27
       rect:
         serializedVersion: 2
         x: 320
@@ -688,14 +724,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff504d60fedf34247af0434b7e279904
-      internalID: 334926760
+      spriteID: efa093cf5f83871429b9d09af381d6d3
+      internalID: -1374298594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_28
+      name: highway_tiles_zone2_28
       rect:
         serializedVersion: 2
         x: 0
@@ -709,14 +745,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a9817d16404af544820bb99a4e6bb09
-      internalID: -188975908
+      spriteID: c2edce496eca78a45a3b4ce74c66daaf
+      internalID: -1108765681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_29
+      name: highway_tiles_zone2_29
       rect:
         serializedVersion: 2
         x: 64
@@ -730,14 +766,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ed9d9ccf5e9cff4bbe3d69a306c0f61
-      internalID: 1626846035
+      spriteID: d5e3a63629976e5408b579d94325c041
+      internalID: -426203049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_30
+      name: highway_tiles_zone2_30
       rect:
         serializedVersion: 2
         x: 128
@@ -751,14 +787,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0a00fb1252b1ff429d9805374935994
-      internalID: 1309716878
+      spriteID: f1d41e5fed527fa4eaa23756f65da5bf
+      internalID: 368222324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_31
+      name: highway_tiles_zone2_31
       rect:
         serializedVersion: 2
         x: 192
@@ -772,14 +808,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bdd9f4df0974c045b23386025cfb764
-      internalID: -1824609095
+      spriteID: e4a12f56e026bc740a1c154dfce01414
+      internalID: -823458537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: highway_tiles_32
+      name: highway_tiles_zone2_32
       rect:
         serializedVersion: 2
         x: 256
@@ -793,8 +829,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef3ff721622f4f4584acc797defbe38
-      internalID: -1216654567
+      spriteID: daa4348330dc1fa4a8b2bacc8563dcde
+      internalID: -64106512
       vertices: []
       indices: 
       edges: []
@@ -810,40 +846,40 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      highway_tiles_1: 1558669496
-      highway_tiles_13: -158991157
-      highway_tiles_22: 4920772
-      highway_tiles_29: 1626846035
-      highway_tiles_3: 1065373737
-      highway_tiles_4: -708996883
-      highway_tiles_11: -1550330486
-      highway_tiles_23: -824955304
-      highway_tiles_26: -686670214
-      highway_tiles_2: -1213470625
-      highway_tiles_25: 2106247769
-      highway_tiles_28: -188975908
-      highway_tiles_19: 1683911705
-      highway_tiles_32: -1216654567
-      highway_tiles_17: 472846507
-      highway_tiles_7: -1568425531
-      highway_tiles_8: 1295405193
-      highway_tiles_27: 334926760
-      highway_tiles_10: -1763085792
-      highway_tiles_20: -437104289
-      highway_tiles_5: -472953462
-      highway_tiles_0: -612032599
-      highway_tiles_9: -768639474
-      highway_tiles_31: -1824609095
-      highway_tiles_21: -178162920
-      highway_tiles_12: -2113925886
-      highway_tiles_30: 1309716878
-      highway_tiles_14: -103155306
-      highway_tiles_18: -465290990
-      highway_tiles_16: 3909436
-      highway_tiles_15: 854703409
-      highway_tiles_6: 1580682773
-      highway_tiles_24: 1527730261
-  spritePackingTag: 
+      highway_tiles_zone2_2: -1379399213
+      highway_tiles_zone2_25: -1432673416
+      highway_tiles_zone2_19: 1095066123
+      highway_tiles_zone2_22: -181977069
+      highway_tiles_zone2_7: 1166701876
+      highway_tiles_zone2_21: -1348550901
+      highway_tiles_zone2_6: -1603442559
+      highway_tiles_zone2_14: -2082386235
+      highway_tiles_zone2_3: -1525078263
+      highway_tiles_zone2_32: -64106512
+      highway_tiles_zone2_29: -426203049
+      highway_tiles_zone2_0: 596777572
+      highway_tiles_zone2_28: -1108765681
+      highway_tiles_zone2_9: -428634793
+      highway_tiles_zone2_30: 368222324
+      highway_tiles_zone2_16: -1451479107
+      highway_tiles_zone2_4: -1716941513
+      highway_tiles_zone2_12: -1309038173
+      highway_tiles_zone2_23: -510614293
+      highway_tiles_zone2_27: -1374298594
+      highway_tiles_zone2_5: -290116180
+      highway_tiles_zone2_17: 2036931904
+      highway_tiles_zone2_20: 946015697
+      highway_tiles_zone2_15: -250711604
+      highway_tiles_zone2_18: 1484002220
+      highway_tiles_zone2_31: -823458537
+      highway_tiles_zone2_26: 1271989934
+      highway_tiles_zone2_24: -1997996129
+      highway_tiles_zone2_1: 1889821099
+      highway_tiles_zone2_8: 1067840553
+      highway_tiles_zone2_13: -213375770
+      highway_tiles_zone2_11: -516260436
+      highway_tiles_zone2_10: -1722733436
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 

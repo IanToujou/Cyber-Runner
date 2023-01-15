@@ -114,6 +114,7 @@ public class PlayerControls : MonoBehaviour {
     }
 
     public void Death() {
+        if(dead) return;
         dead = true;
         GetComponentInChildren<SpriteRenderer>().enabled = false;
         RemoveWeapon();
