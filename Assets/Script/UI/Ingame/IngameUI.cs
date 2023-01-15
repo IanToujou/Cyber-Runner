@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class IngameUI : MonoBehaviour {
 
-    public const int MAIN = 0;
-    public const int DEATH = 1;
+    public const int ENTRY = 0;
+    public const int MAIN = 1;
+    public const int DEATH = 2;
 
+    [SerializeField] private GameObject entryUI;
     [SerializeField] private GameObject mainUI;
     [SerializeField] private GameObject deathUI;
     
@@ -14,9 +16,10 @@ public class IngameUI : MonoBehaviour {
     
     void OnEnable() {
         uiList = new List<GameObject>();
+        uiList.Add(entryUI);
         uiList.Add(mainUI);
         uiList.Add(deathUI);
-        SetActiveCanvas(MAIN);
+        SetActiveCanvas(ENTRY);
     }
 
     void Update() {
