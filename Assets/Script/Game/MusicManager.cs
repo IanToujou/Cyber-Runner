@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour {
     
@@ -11,7 +12,9 @@ public class MusicManager : MonoBehaviour {
 
     void Start() {
         currentSong = null;
-        PlaySong(1);
+        if(SceneManager.GetActiveScene().name.Contains("One")) PlaySong(1);
+        if(SceneManager.GetActiveScene().name.Contains("Two")) PlaySong(2);
+        if(SceneManager.GetActiveScene().name.Contains("Three")) PlaySong(3);
     }
 
     public void PlaySong(int song) {

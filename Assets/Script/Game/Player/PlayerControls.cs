@@ -37,10 +37,6 @@ public class PlayerControls : MonoBehaviour {
     }
 
     void Update() {
-        
-        if(Input.GetKeyDown(KeyCode.H)) {
-            Hurt(5);
-        }
 
         //Shield and health fix for future usage.
         if(health < 0) health = 0;

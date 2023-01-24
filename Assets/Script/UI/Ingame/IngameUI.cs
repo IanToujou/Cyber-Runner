@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IngameUI : MonoBehaviour {
 
@@ -25,7 +26,7 @@ public class IngameUI : MonoBehaviour {
     void Update() {
         if(activeCanvas == DEATH) {
             if(Input.GetKeyDown(KeyCode.F)) {
-                GameManager.SetLevel(1);
+                GameManager.SetLevel(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
