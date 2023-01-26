@@ -2605,7 +2605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab421511de12d3f4799233127f993a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entryUI: {fileID: 0}
+  entryUI: {fileID: 1224895858}
   mainUI: {fileID: 1803284506}
   deathUI: {fileID: 1705589750}
 --- !u!4 &358590175 stripped
