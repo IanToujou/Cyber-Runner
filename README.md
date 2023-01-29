@@ -9,7 +9,7 @@
 
 ## 🌐 LINKS
 
-[![Trailer](https://img.shields.io/badge/-Watch%20the%20Trailer-crimson?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=u24Z5Z3WHRk)
+[![Trailer](https://img.shields.io/badge/-Watch%20the%20Trailer-crimson?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=eaPXBdzJg98)
 
 ## 📝 DESCRIPTION
 
