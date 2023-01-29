@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedByPlayer: 1
   speed: 3
-  damage: 3
+  damage: 5
 --- !u!50 &8626930716078281845
 Rigidbody2D:
   serializedVersion: 4

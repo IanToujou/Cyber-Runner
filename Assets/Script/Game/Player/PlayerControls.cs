@@ -12,7 +12,7 @@ public class PlayerControls : MonoBehaviour {
     private float lerpValue;
     private Rigidbody2D rigidBody;
     private GameObject currentWeapon;
-    private bool coolingDownHit, dead;
+    private bool coolingDownHit, dead, jumping;
     private Animator animator;
     private AudioSource audioSource;
 
@@ -25,6 +25,7 @@ public class PlayerControls : MonoBehaviour {
         lerpValue = 0;
         coolingDownHit = false;
         dead = false;
+        jumping = false;
 
         if(weapon != null) {
             SetWeapon(weapon);
@@ -48,20 +49,24 @@ public class PlayerControls : MonoBehaviour {
 
         if(currentLane > maxLane || currentLane < minLane) Death();
 
-        if(Input.GetKeyDown(KeyCode.W) && currentLane < maxLane) {
-            currentLane += 1;
-        } else if(Input.GetKeyDown(KeyCode.S) && currentLane > minLane) {
-            currentLane -= 1;
-        }
+        if(!jumping) {
+            
+            if(Input.GetKeyDown(KeyCode.W) && currentLane < maxLane) {
+                currentLane += 1;
+            } else if(Input.GetKeyDown(KeyCode.S) && currentLane > minLane) {
+                currentLane -= 1;
+            }
 
-        float y = -2.15f + currentLane;
-        Vector3 newPosition = new Vector3(transform.position.x, y, transform.position.z);
+            float y = -2.15f + currentLane;
+            Vector3 newPosition = new Vector3(transform.position.x, y, transform.position.z);
 
-        if (lerpValue < 0.2) {
-             lerpValue += Time.deltaTime / 5;
-             transform.position = Vector3.Lerp(transform.position, newPosition, lerpValue);
-        } else {
-             lerpValue = 0;
+            if (lerpValue < 0.2) {
+                lerpValue += Time.deltaTime / 5;
+                transform.position = Vector3.Lerp(transform.position, newPosition, lerpValue);
+            } else {
+                lerpValue = 0;
+            }
+
         }
 
         if(currentWeapon != null) {
@@ -149,6 +154,11 @@ public class PlayerControls : MonoBehaviour {
         }
     }
 
+    public void Jump() {
+        jumping = true;
+        StartCoroutine(StartJumpCooldown());
+    }
+
     public float GetSpeed() {
         return speed;
     }
@@ -234,6 +244,20 @@ public class PlayerControls : MonoBehaviour {
     public IEnumerator StartDeathScreenCooldown() {
         yield return new WaitForSeconds(0.2f);
         IngameUI.SetActiveCanvas(IngameUI.DEATH);
+    }
+
+    public IEnumerator StartJumpCooldown() {
+        for(int i = 0; i < 100; i++) {
+            transform.position = new Vector3(transform.position.x, transform.position.y+0.05f, transform.position.z);
+            yield return new WaitForSeconds(0.005f);
+        }
+        yield return new WaitForSeconds(0.2f);
+        for(int i = 0; i < 100; i++) {
+            transform.position = new Vector3(transform.position.x, transform.position.y-0.05f, transform.position.z);
+            yield return new WaitForSeconds(0.005f);
+        }
+        yield return new WaitForSeconds(0.1f);
+        jumping = false;
     }
 
 }
