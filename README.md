@@ -1,16 +1,29 @@
 # ✨ CYBER RUNNER
 
-[![Status](https://img.shields.io/badge/-Unfinished-orange?style=for-the-badge&label=Status)](https://github.com/IanToujou/Cyber-Runner)
-[![Discord Server](https://img.shields.io/discord/803708765265985587?color=5865F2&label=Discord&logo=discord&logoColor=white&style=for-the-badge)](https://toujoustudios.net/tearoom)
+[![Status](https://img.shields.io/badge/-Discontinued-yellow?style=for-the-badge&label=Status)](https://github.com/IanToujou/Cyber-Runner)
+[![Licence](https://img.shields.io/github/license/IanToujou/Cyber-Runner?label=License&style=for-the-badge)](https://github.com/IanToujou/Gateway-Edge/releases/tag/latest)
+[![Downloads](https://img.shields.io/github/downloads/IanToujou/Cyber-Runner/total?color=valid&label=Downloads&style=for-the-badge)](https://github.com/IanToujou/Gateway-Edge/releases/tag/latest)
+[![Release](https://img.shields.io/github/v/release/IanToujou/Cyber-Runner?label=Release&style=for-the-badge)](https://github.com/IanToujou/Gateway-Edge/releases/latest)
+
+![GameBanner](https://user-images.githubusercontent.com/44029196/215339666-297f36f1-426c-4456-96ed-7229cd8ca2f4.png)
+
+## 🌐 LINKS
+
+[![Trailer](https://img.shields.io/badge/-Watch%20the%20Trailer-crimson?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=u24Z5Z3WHRk)
 
 ## 📝 DESCRIPTION
 
-*This project is still work in progress!*
+Cyber Runner is a retrowave-styled game where you need to navigate through multiple lanes and beat enemies.
+
+The mechanics are quite simple and the game is not too complex, because it was made for a simple school project. You can still try out the game though, just don't expect anything too fancy! :D
 
 ## 🔥 FEATURES
 
+* Lane switching game
 * Neon-Cyber themed environment
-* Cool music!
+* 3 different zones
+* Challenging enemies
+* Synthwave music
 
 ## 🛠️ SUPPORT
 
